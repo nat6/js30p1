@@ -22,7 +22,7 @@ const header = document.createElement('header');
 header.className = headerClass;
 
 const headerBlock = document.createElement('div');
-headerBlock.innerHTML = headerText;
+headerBlock.textContent = headerText;
 headerBlock.className = headerBlockClass;
 
 const footer = document.createElement('footer');
