@@ -1,3 +1,5 @@
+@import '../utils/variables.scss';
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +11,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-family: $mainFont;
 }
 
 .main__block {
@@ -24,5 +26,5 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 5px solid orange;
+  border: 5px solid $secondaryColor;
 }
