@@ -7,6 +7,12 @@
 
 a {
   color: $secondaryColor;
+  text-decoration: none;
+
+  &:hover {
+    color: $primaryColor;
+    transition: $basicTrans;
+  }
 }
 
 body {
@@ -30,7 +36,7 @@ body::before {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  filter: blur(5px);
+  filter: blur(8px);
   z-index: -1;
 }
 
@@ -70,6 +76,31 @@ body::before {
   align-items: center;
   border: 3px solid $primaryColor;
   backdrop-filter: blur(10px) brightness(60%);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &_active {
+    backdrop-filter: brightness(30%);
+
+    & .note__sound {
+      color: $secondaryColor;
+    }
+  }
+}
+
+.note__block:hover,
+.note__block_active {
+  border-color: $activeColor;
+  transition: $basicTrans;
+}
+
+.note__block:hover .note__letter,
+.note__block_active .note__letter {
+  margin-bottom: 4px;
+  font-size: 200%;
+  transition: $basicTrans;
 }
 
 .note__letter {
@@ -99,10 +130,18 @@ body::before {
 
   &__item {
     display: flex;
+
+    & > * {
+      padding: 10px;
+    }
   }
 }
 
-.footer__item .course__link {
-  margin-left: 8px;
+.course__link {
+  padding-left: 0;
   color: $primaryColor;
+
+  &:hover {
+    color: $fontColor;
+  }
 }
